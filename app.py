@@ -6,7 +6,8 @@ from routes.routes import (
     agregar_carrito,
     eliminar_carrito,
     obtener_total,
-    ver_carrito
+    ver_carrito,
+    vaciar_carrito
 )
 # creamos la aplicación
 app = Flask(__name__)
@@ -18,7 +19,7 @@ app.route('/carrito', methods=['GET'])(ver_carrito)
 app.route('/carrito/add', methods=['POST'])(agregar_carrito)
 app.route('/carrito/<int:id>', methods=['DELETE'])(eliminar_carrito)
 app.route('/carrito/total', methods=['GET'])(obtener_total)
-
+app.route('/carrito', methods=['DELETE'])(vaciar_carrito)
 
 # Ejecuta la aplicación Flask
 #if __name__ == '__main__':

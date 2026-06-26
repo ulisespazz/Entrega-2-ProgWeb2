@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import Swal from 'sweetalert2';
-import './App.css'; // Aquí pondremos los estilos más adelante
+import './App.css';
 
 function App() {
   // Estados para guardar la información que viene de tu Flask API
@@ -20,11 +20,9 @@ function App() {
   // Envía el ID del producto a Flask mediante una petición POST
   const agregarAlCarrito = async (id) => {
     try {
-      await fetch('http://localhost:5000/carrito/add', {
+      await fetch('http://localhost:5000/carrito/add', {  
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ id })
       });
       obtenerCarrito();
@@ -66,6 +64,25 @@ function App() {
     .then(response => response.json())         // traduce el numero
     .then(data => setTotal(data.total));       // actualiza el cartel en pantalla
   };
+
+  const pagar = async () => {
+  try {
+    await fetch("http://localhost:5000/carrito", {
+      method: "DELETE"
+    });
+
+    obtenerCarrito();
+    obtenerTotal();
+
+    Swal.fire({
+      title: "¡Gracias por tu compra!",
+      text: "Tu pedido fue realizado con éxito.",
+      icon: "success"
+    });
+
+  } catch (error) {
+    console.error(error);
+  }};
 
   // useEffect se ejecuta automáticamente cuando se abre la página
   useEffect(() => {
@@ -155,6 +172,9 @@ function App() {
               <span>Total:</span>
               <span style={{ color: '#2e7d32' }}>${total}</span>
             </div>
+            <button className="btn-pagar" onClick={pagar}>
+                Pagar
+            </button>
           </section>)}
 
         </div>

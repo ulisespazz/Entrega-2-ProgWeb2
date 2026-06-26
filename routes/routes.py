@@ -63,3 +63,11 @@ def obtener_total():
     return jsonify({
         "total": total
     })
+
+# DELETE carrito completo al pagar
+def vaciar_carrito():
+    carrito_collection.delete_many({})
+
+    return jsonify({
+        "mensaje": "Compra realizada"
+    })

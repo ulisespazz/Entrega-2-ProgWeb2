@@ -129,3 +129,19 @@ body {
   object-fit: contain;   /* Hace que la imagen no se estire feo */
   margin-bottom: 10px;
 }
+
+.btn-pagar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.btn-pagar:hover {
+  background-color: #218838;
+}
