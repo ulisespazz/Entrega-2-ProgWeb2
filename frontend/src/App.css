@@ -1,0 +1,131 @@
+.navbar{
+    width:100%;
+    height:70px;
+
+    background:#0d6efd;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+    box-sizing:border-box;
+}
+
+.btn-carrito{
+    background:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.shop-layout {
+  display: flex;
+  gap: 40px;
+}
+
+.productos-section, .carrito-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.producto-card {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.btn-agregar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-eliminar{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-agregar:hover {
+  background-color: #0056b3;
+}
+
+.carrito-item {
+  padding: 8px 0;
+  border-bottom: 1px dotted #ccc;
+  list-style: none;
+}
+
+.carrito-item{
+  padding: 12px 0;
+  border-bottom: 1px dotted #ccc;
+  list-style: none;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+/* --- AGREGÁ ESTO AL FINAL DE TU CSS --- */
+
+/* 1. Modificá la sección del carrito para que use flexbox en vertical */
+.carrito-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px; /* Esto le da una buena altura para tirar el total al fondo */
+}
+
+/* 2. Creá la clase que te faltaba para el total */
+.total-container {
+  margin-top: auto; /* <--- Esto empuja el total abajo de todo al final de la tarjeta */
+  padding-top: 15px;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.carrito-list {
+  padding: 0;
+  margin: 20px 0;
+  
+  /* --- AGREGA ESTAS 3 LÍNEAS --- */
+  max-height: 600px;      /* Define la altura máxima que permites antes de activar la barra */
+  overflow-y: auto;       /* Activa la barrita de scroll vertical automáticamente si se pasa */
+  padding-right: 8px;     /* Deja un pequeño espacio para que la barra no tape los botones */
+}
+.producto-foto {
+  width: 80px;           /* Ajustá el ancho a tu gusto */
+  height: 80px;          /* Ajustá el alto a tu gusto */
+  object-fit: contain;   /* Hace que la imagen no se estire feo */
+  margin-bottom: 10px;
+}
