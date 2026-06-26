@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "CocaCola",
+    "precio": 1800
+  },
+  {
+    "id": 2,
+    "nombre": "Pepsi",
+    "precio": 1500
+  },
+  {
+    "id": 3,
+    "nombre": "7up",
+    "precio": 1500
+  },
+  {
+    "id": 4,
+    "nombre": "Speed",
+    "precio": 1200
+  },
+  {
+    "id": 5,
+    "nombre": "Agua",
+    "precio": 1000
+  },
+  {
+    "id": 6,
+    "nombre": "Mirinda",
+    "precio": 1500
+  }
+]

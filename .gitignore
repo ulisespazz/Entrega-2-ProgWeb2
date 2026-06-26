@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# React
+frontend/node_modules/
+frontend/build/
+
+# Variables de entorno
+.env
+
+# VS Code
+.vscode/
+
+# Cypress
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+
+# Logs
+*.log
